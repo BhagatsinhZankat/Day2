@@ -8,8 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v4
       
-      - name: Run a sample
-        run: echo "Hello world"
+      - name: run a sample
+        run: echo Hello World
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: ${{ github.workspace }}
