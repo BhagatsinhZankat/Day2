@@ -9,6 +9,7 @@ jobs:
     runs-on: ubnutu-latest
     steps: 
       - uses: actions/checkout@v4
+      
       - name: run a smaple
         run: echo Hello worls
         
